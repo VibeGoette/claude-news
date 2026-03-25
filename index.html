@@ -231,6 +231,33 @@ body.mc-hover .mc-ring { width:52px; height:52px; border-color:rgba(193,168,130,
 .learning-text strong{display:block;font-size:1.05rem;margin-bottom:7px;font-weight:500}
 .learning-text p{font-size:0.88rem;color:rgba(255,255,255,0.42);font-weight:300;line-height:1.75;max-width:540px}
 
+/* AUTO MODE DEEP DIVE */
+.mode-compare{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;max-width:1100px;width:100%;margin-top:56px;border-radius:16px;overflow:hidden}
+.mode-col{padding:36px 28px;background:rgba(255,255,255,0.03);opacity:0;transform:translateY(20px);transition:opacity 0.6s ease,transform 0.6s ease}
+.mode-col.visible{opacity:1;transform:none}
+.mode-col-active{background:rgba(193,168,130,0.06);border:1px solid rgba(193,168,130,0.15)}
+.mode-icon{width:44px;height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;margin-bottom:18px;font-size:1.2rem}
+.mode-icon-red{background:rgba(222,115,86,0.12);color:var(--peach)}
+.mode-icon-yellow{background:rgba(193,168,130,0.12);color:var(--clay)}
+.mode-icon-green{background:rgba(109,222,154,0.12);color:#6dde9a}
+.mode-label{font-size:0.58rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--clay);margin-bottom:8px}
+.mode-name{font-family:var(--font-head);font-weight:400;font-size:1.3rem;margin-bottom:12px}
+.mode-desc{font-size:0.84rem;color:rgba(255,255,255,0.42);line-height:1.7;font-weight:300}
+.mode-tag{display:inline-block;padding:3px 10px;border-radius:100px;font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;margin-top:14px}
+.mode-tag-old{color:rgba(255,255,255,0.3);border:1px solid rgba(255,255,255,0.1)}
+.mode-tag-new{color:#6dde9a;border:1px solid rgba(109,222,154,0.25);background:rgba(109,222,154,0.06)}
+.usecase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;max-width:1100px;width:100%;margin-top:36px}
+.usecase-card{background:rgba(255,255,255,0.025);border:1px solid rgba(255,255,255,0.06);border-radius:14px;padding:28px;opacity:0;transform:translateY(20px);transition:opacity 0.5s ease,transform 0.5s ease,border-color 0.3s}
+.usecase-card.visible{opacity:1;transform:none}
+.usecase-card:hover{border-color:rgba(193,168,130,0.2)}
+.usecase-num{font-family:var(--font-head);font-weight:400;font-size:1.8rem;color:rgba(193,168,130,0.15);margin-bottom:8px}
+.usecase-title{font-size:1rem;font-weight:500;margin-bottom:8px}
+.usecase-body{font-size:0.82rem;color:rgba(255,255,255,0.4);line-height:1.7;font-weight:300}
+@media(max-width:767px){
+  .mode-compare{grid-template-columns:1fr;gap:8px}
+  .usecase-grid{grid-template-columns:1fr}
+}
+
 /* RESPONSIVE */
 @media(max-width:1023px){
   nav{padding:14px 32px}
@@ -441,6 +468,66 @@ body.mc-hover .mc-ring { width:52px; height:52px; border-color:rgba(193,168,130,
         <div class="card-body">Wiederkehrende Aufgaben automatisieren mit /loop. Maximale Denktiefe mit Ultrathink. /effort steuert den Rechenaufwand.</div>
       </div>
     </div>
+
+    <!-- Auto Mode Deep Dive -->
+    <div style="margin-top:80px">
+      <div class="chapter-number reveal" style="text-align:center">Deep Dive &mdash; Auto Mode</div>
+      <h2 class="chapter-title reveal" style="text-align:center;font-size:clamp(2rem,5vw,4rem)">Der intelligente <em>Mittelweg.</em></h2>
+      <p class="chapter-body reveal" style="text-align:center;max-width:640px;margin:0 auto 0">Bisher gab es zwei Extreme: Jede Aktion bestätigen &mdash; oder alles blind erlauben. Auto Mode nutzt einen Echtzeit-Klassifikator, der jede geplante Aktion auf ihr Risiko prüft und nur bei echten Gefahren stoppt.</p>
+    </div>
+
+    <div class="mode-compare">
+      <div class="mode-col reveal">
+        <div class="mode-icon mode-icon-yellow">?</div>
+        <div class="mode-label">Bisheriger Standard</div>
+        <div class="mode-name">Ask Before Edits</div>
+        <div class="mode-desc">Claude fragt bei jeder Dateiänderung und jedem Terminal-Befehl um Erlaubnis. Sicher, aber der Workflow pausiert alle paar Sekunden. Keine Möglichkeit, eine große Aufgabe zu delegieren und kurz wegzugehen.</div>
+        <div class="mode-tag mode-tag-old">Seit Launch</div>
+      </div>
+      <div class="mode-col reveal">
+        <div class="mode-icon mode-icon-red">!</div>
+        <div class="mode-label">Volles Risiko</div>
+        <div class="mode-name">Skip Permissions</div>
+        <div class="mode-desc">Claude bekommt einen Freifahrtschein für alles. Maximale Geschwindigkeit, aber eine KI könnte versehentlich wichtige Systemdateien löschen oder überschreiben. Für Produktionsumgebungen ungeeignet.</div>
+        <div class="mode-tag mode-tag-old">Seit Launch</div>
+      </div>
+      <div class="mode-col mode-col-active reveal">
+        <div class="mode-icon mode-icon-green">A</div>
+        <div class="mode-label">24. März 2026</div>
+        <div class="mode-name">Auto Mode</div>
+        <div class="mode-desc">Ein integrierter Klassifikator prüft jede Aktion in Echtzeit. Ungefährliche Aktionen (Code schreiben, Dateien erstellen, Tests ausführen) laufen automatisch. Riskante Befehle erfordern weiterhin manuelle Freigabe.</div>
+        <div class="mode-tag mode-tag-new">Neu</div>
+      </div>
+    </div>
+
+    <div style="margin-top:56px">
+      <div class="chapter-number reveal" style="text-align:center">Use Cases</div>
+      <h3 class="chapter-title reveal" style="text-align:center;font-size:clamp(1.6rem,4vw,3rem)">Wo Auto Mode den <em>Unterschied</em> macht.</h3>
+    </div>
+
+    <div class="usecase-grid">
+      <div class="usecase-card reveal">
+        <div class="usecase-num">01</div>
+        <div class="usecase-title">Großflächiges Refactoring</div>
+        <div class="usecase-body">40 Dateien müssen ein neues Design-Pattern bekommen. Im normalen Modus: 40-mal manuell bestätigen. Im Auto Mode stuft der Klassifikator reine Datei-Updates innerhalb des Projektordners als sicher ein &mdash; Claude arbeitet alles in einem Rutsch durch.</div>
+      </div>
+      <div class="usecase-card reveal">
+        <div class="usecase-num">02</div>
+        <div class="usecase-title">Autarke Debugging-Loops</div>
+        <div class="usecase-body">Claude analysiert Code, passt ihn an, führt Tests aus, liest Fehlermeldungen, passt erneut an. Der gesamte iterative Prozess läuft ohne Unterbrechung, weil lokale Test-Skripte als sicher eingestuft werden &mdash; bis alle Tests grün sind.</div>
+      </div>
+      <div class="usecase-card reveal">
+        <div class="usecase-num">03</div>
+        <div class="usecase-title">Projekt-Setup &amp; Boilerplate</div>
+        <div class="usecase-body">Ordnerstruktur, package.json, Datenbankkonfiguration, API-Routen &mdash; das massenhafte Erstellen und Befüllen leerer Dateien gilt als ungefährlich. Claude baut das komplette Projektgerüst in Sekunden, ohne jede einzelne Datei abzunicken.</div>
+      </div>
+      <div class="usecase-card reveal">
+        <div class="usecase-num">04</div>
+        <div class="usecase-title">Datenaufbereitung &amp; Skripte</div>
+        <div class="usecase-body">100 CSV-Dateien einlesen, bereinigen, zusammenfassen. Claude schreibt das Skript, testet es an einer Beispieldatei, prüft den Output und bessert Fehler aus &mdash; alles im Hintergrund ohne manuelle Zwischenschritte.</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -451,7 +538,7 @@ body.mc-hover .mc-ring { width:52px; height:52px; border-color:rgba(193,168,130,
   <div class="chapter-inner">
     <div class="chapter-number reveal">04 &mdash; Pentagon-Konflikt</div>
     <h2 class="chapter-title reveal">Zwei rote Linien. Eine Regierungsreaktion. Und <em>Nr. 1</em> im App Store.</h2>
-    <p class="chapter-body reveal">Anthropic zog zwei Grenzen für militaerische KI-Nutzung: keine Massenüberwachung, keine autonomen Waffen. Die Trump-Regierung reagierte mit einer Anordnung, alle Bundesbehoerden sollten Claude abschalten. Die öffentliche Reaktion fiel überraschend pro-Anthropic aus.</p>
+    <p class="chapter-body reveal">Anthropic zog zwei Grenzen für militärische KI-Nutzung: keine Massenüberwachung, keine autonomen Waffen. Die Trump-Regierung reagierte mit einer Anordnung, alle Bundesbehörden sollten Claude abschalten. Die öffentliche Reaktion fiel überraschend pro-Anthropic aus.</p>
 
     <div class="fact-strip" style="background:transparent;padding:56px 0">
       <div class="fact-grid" style="background:rgba(255,255,255,0.04)">
@@ -647,7 +734,7 @@ body.mc-hover .mc-ring { width:52px; height:52px; border-color:rgba(193,168,130,
 const observer=new IntersectionObserver((entries)=>{
   entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}});
 },{threshold:0.15,rootMargin:'0px 0px -40px 0px'});
-document.querySelectorAll('.reveal,.stat-item,.card,.timeline-item,.fact-cell,.learning-item,.big-number').forEach(el=>observer.observe(el));
+document.querySelectorAll('.reveal,.stat-item,.card,.timeline-item,.fact-cell,.learning-item,.big-number,.mode-col,.usecase-card').forEach(el=>observer.observe(el));
 
 // ═══════════════════════════════════════ COUNTER ANIMATION ═══════════════════════════════════════
 const counterObs=new IntersectionObserver((entries)=>{
