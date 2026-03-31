@@ -39,37 +39,30 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 48px;display:fl
 @media(max-width:900px){nav{padding:14px 20px}.nav-dots{display:none}#hero{padding:110px 24px 70px}.section{padding:clamp(56px,10vw,100px) 24px}.cards-grid,.cards-3,.usecase-grid{grid-template-columns:1fr}.stats-grid{grid-template-columns:repeat(2,1fr)}.stat:not(:last-child)::after{display:none}.stat:nth-child(-n+2){border-bottom:1px solid var(--border)}.feature-item{flex-direction:column;gap:8px}.feature-num{font-size:1.4rem}.quote-section{padding:56px 24px}.big-section{padding:56px 24px}#outro{padding:56px 24px}.compare-table th,.compare-table td{padding:12px 14px;font-size:0.8rem}}
 @media(max-width:480px){.hero-title{font-size:clamp(2.2rem,11vw,3.6rem)}.section-title{font-size:clamp(1.8rem,8vw,2.8rem)}.stats-grid{grid-template-columns:1fr}.stat{border-bottom:1px solid var(--border)!important}.stat:last-child{border-bottom:none!important}}
 </style>
-</head>
+
 <body>
 <div id="progress"></div>
 <nav>
   <div class="nav-brand">
     <div class="nav-logo">C</div>
-    <div>
-      <div class="nav-title">Claude</div>
-      <div class="nav-sub">Bones Hands Briefing</div>
-    </div>
+    <div><div class="nav-title">Claude</div><div class="nav-sub">Bones Hands Briefing</div></div>
   </div>
   <div class="nav-dots">
-    <a href="#hero" class="nav-dot active"></a>
-    <a href="#s01" class="nav-dot"></a>
-    <a href="#s02" class="nav-dot"></a>
-    <a href="#s03" class="nav-dot"></a>
-    <a href="#s04" class="nav-dot"></a>
-    <a href="#s05" class="nav-dot"></a>
-    <a href="#s06" class="nav-dot"></a>
-    <a href="#s07" class="nav-dot"></a>
-    <a href="#outro" class="nav-dot"></a>
+    <a href="#hero" class="nav-dot active"></a><a href="#s01" class="nav-dot"></a><a href="#s02" class="nav-dot"></a><a href="#s03" class="nav-dot"></a><a href="#s04" class="nav-dot"></a><a href="#s05" class="nav-dot"></a><a href="#s06" class="nav-dot"></a><a href="#s07" class="nav-dot"></a><a href="#s08" class="nav-dot"></a><a href="#s09" class="nav-dot"></a><a href="#s10" class="nav-dot"></a><a href="#s11" class="nav-dot"></a><a href="#outro" class="nav-dot"></a>
   </div>
 </nav>
+
+<!-- HERO -->
 <section id="hero">
   <canvas id="hero-canvas"></canvas>
-  <div class="hero-badge"><span class="hero-badge-dot"></span> Live Presentation · 2026</div>
-  <div class="hero-for">Exklusiv für Bones Hands GmbH · Bochum</div>
-  <h1 class="hero-title">Euer nächster<br>Mitarbeiter ist<br>eine <em>KI.</em></h1>
-  <p class="hero-sub">Wie Claude von Anthropic euer E-Commerce, Content-Marketing und Kundenservice transformiert — und warum ihr jetzt Power User werden solltet.</p>
+  <div class="hero-badge"><span class="hero-badge-dot"></span> Live Presentation &middot; 2026</div>
+  <div class="hero-for">Exklusiv f&uuml;r Bones Hands GmbH &middot; Bochum</div>
+  <h1 class="hero-title">Euer n&auml;chster<br>Mitarbeiter ist<br>eine <em>KI.</em></h1>
+  <p class="hero-sub">Wie Claude von Anthropic euer E-Commerce, Content-Marketing und Kundenservice transformiert &mdash; und warum ihr jetzt Power User werden solltet.</p>
   <div class="hero-scroll">Scrollen zum Starten<div class="scroll-line"></div></div>
 </section>
+
+<!-- STATS -->
 <div class="stats-bar">
   <div class="stats-grid">
     <div class="stat reveal"><span class="stat-num" data-target="253" data-suffix="K+">0</span><div class="stat-label">Trusted Shops<br>Bewertungen</div></div>
@@ -79,149 +72,230 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:18px 48px;display:fl
   </div>
 </div>
 <hr class="glow-div">
+
+<!-- 01 WAS IST CLAUDE -->
 <section class="section glow-iris" id="s01">
   <div class="section-inner">
-    <div class="section-number reveal">01 — Was ist Claude</div>
+    <div class="section-number reveal">01 &mdash; Was ist Claude</div>
     <h2 class="section-title reveal">Nicht ChatGPT.<br>Nicht Google.<br><em>Anders.</em></h2>
-    <p class="section-body reveal">Claude ist eine KI von Anthropic — dem Unternehmen, das von ehemaligen OpenAI-Gründern aufgebaut wurde. Aktuell bewertet mit 380 Milliarden Dollar. Claude denkt, schreibt, analysiert, programmiert und automatisiert. Nicht als Spielzeug. Als ernsthafter Mitarbeiter, der 24/7 verfügbar ist.</p>
+    <p class="section-body reveal">Claude ist eine KI von Anthropic &mdash; gegr&uuml;ndet von ehemaligen OpenAI-Forschern, aktuell bewertet mit 380 Milliarden Dollar. Claude denkt, schreibt, analysiert, programmiert und automatisiert. Nicht als Spielzeug. Als ernsthafter Mitarbeiter, der 24/7 verf&uuml;gbar ist.</p>
     <div class="cards-grid">
-      <div class="card reveal"><div class="card-tag">Intelligenz</div><div class="card-title">Denkt wie ein Mensch</div><div class="card-body">Claude versteht Kontext, Nuancen und Zusammenhänge. Es gibt keine Keyword-Suche — ihr redet mit Claude wie mit einem Kollegen. Auf Deutsch, auf Englisch, auf Türkisch.</div></div>
-      <div class="card reveal"><div class="card-tag">Kapazität</div><div class="card-title">1 Million Token Kontext</div><div class="card-body">Claude kann gleichzeitig hunderte Seiten lesen, analysieren und zusammenfassen. Euer komplettes Produktsortiment, Kundenfeedback und Marktanalysen — in einem Gespräch.</div></div>
-      <div class="card reveal"><div class="card-tag">Sicherheit</div><div class="card-title">Safety-First Design</div><div class="card-body">Anthropic investiert massiv in KI-Sicherheit. Claude lehnt Pentagon-Aufträge für autonome Waffen ab. Diese Ethik überträgt sich auf den Umgang mit euren Daten.</div></div>
-      <div class="card reveal"><div class="card-tag">Verfügbarkeit</div><div class="card-title">24/7, nie krank</div><div class="card-body">Morgens um 3 eine Produktbeschreibung? Sonntags einen Blog-Artikel? Eine Ad-Copy auf Englisch für den UK-Markt? Claude ist immer da. Sofort.</div></div>
+      <div class="card reveal"><div class="card-tag">Intelligenz</div><div class="card-title">Denkt wie ein Mensch</div><div class="card-body">Claude versteht Kontext, Nuancen und Zusammenh&auml;nge. Ihr redet mit Claude wie mit einem Kollegen. Auf Deutsch, Englisch, T&uuml;rkisch &mdash; in &uuml;ber 90 Sprachen.</div></div>
+      <div class="card reveal"><div class="card-tag">Kapazit&auml;t</div><div class="card-title">1 Million Token Kontext</div><div class="card-body">Claude kann gleichzeitig hunderte Seiten lesen, analysieren und zusammenfassen. Euer komplettes Produktsortiment und Kundenfeedback &mdash; in einem Gespr&auml;ch.</div></div>
+      <div class="card reveal"><div class="card-tag">Sicherheit</div><div class="card-title">Safety-First Design</div><div class="card-body">Anthropic investiert massiv in KI-Sicherheit. Claude lehnt Pentagon-Auftr&auml;ge f&uuml;r autonome Waffen ab. Diese Ethik &uuml;bertr&auml;gt sich auf den Umgang mit euren Daten.</div></div>
+      <div class="card reveal"><div class="card-tag">Verf&uuml;gbarkeit</div><div class="card-title">24/7, nie krank</div><div class="card-body">Morgens um 3 eine Produktbeschreibung? Sonntags einen Blog-Artikel? Eine Ad-Copy f&uuml;r den UK-Markt? Claude ist immer da. Sofort.</div></div>
     </div>
   </div>
 </section>
 <hr class="glow-div">
+
+<!-- 02 CLAUDE.AI CHAT -->
 <section class="section glow-warm" id="s02">
   <div class="section-inner">
-    <div class="section-number reveal">02 — Die Superkräfte</div>
-    <h2 class="section-title reveal">Was Claude <em>alles</em> kann.</h2>
-    <p class="section-body reveal">Das ist keine Suchmaschine. Das ist ein komplettes Team in einer Oberfläche.</p>
-    <div class="feature-list">
-      <div class="feature-item reveal"><div class="feature-num">01</div><div class="feature-text"><strong>Texte schreiben</strong><p>Blog-Artikel, Produktbeschreibungen, Social Media Posts, Werbetexte, E-Mails, Newsletter — in eurem Ton, in eurer Sprache, in jeder Länge.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">02</div><div class="feature-text"><strong>Dokumente analysieren</strong><p>Ladet PDFs, Excel-Tabellen, Bilder hoch. Claude liest, versteht und fasst zusammen. Verträge prüfen, Lieferantenangebote vergleichen, Rechnungen auswerten.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">03</div><div class="feature-text"><strong>Web-Recherche</strong><p>Claude durchsucht das Internet in Echtzeit. Marktanalysen, Konkurrenzbeobachtung, Trend-Recherche — mit Quellenangaben.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">04</div><div class="feature-text"><strong>Code & Automatisierung</strong><p>Shopify-Anpassungen, automatisierte Workflows, Datenauswertungen, Excel-Formeln — Claude programmiert und erklärt euch jeden Schritt.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">05</div><div class="feature-text"><strong>Bilder & Dateien erstellen</strong><p>Präsentationen, PDF-Reports, Infografiken, Social-Media-Grafiken — Claude erstellt druckfertige Dateien zum Download.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">06</div><div class="feature-text"><strong>Memory & Kontext</strong><p>Claude merkt sich euer Business, eure Produkte, euren Schreibstil. Je länger ihr arbeitet, desto besser wird die Zusammenarbeit.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">07</div><div class="feature-text"><strong>Cowork & Computer Use</strong><p>Die neueste Funktion: Claude steuert euren Computer direkt. Dateien organisieren, Tabellen ausfüllen, Browser navigieren — autonom.</p></div></div>
-    </div>
-  </div>
-</section>
-<div class="big-section">
-  <div class="big-num reveal">10x</div>
-  <div class="big-label">Produktivitätssteigerung</div>
-  <div class="big-sub">Harvard-Studie: KI-unterstützte Wissensarbeiter sind bis zu 40% schneller. Power User berichten von 10-facher Effizienz bei Routineaufgaben.</div>
-</div>
-<hr class="glow-div">
-<section class="section glow-warm" id="s03">
-  <div class="section-inner">
-    <div class="section-number reveal">03 — E-Commerce Power</div>
-    <h2 class="section-title reveal">Was das konkret für <em>Bones Hands</em> bedeutet.</h2>
-    <p class="section-body reveal">Euer Shopify-Shop, eure 39 Produkte, eure 253.000+ Bewertungen — Claude kennt euer Business und macht es besser.</p>
-    <div class="usecase-grid">
-      <div class="usecase reveal"><div class="usecase-icon usecase-icon-1"><svg viewBox="0 0 24 24" fill="none" stroke="#8B7CF6" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div class="usecase-title">Produktbeschreibungen</div><div class="usecase-body">Claude schreibt SEO-optimierte Beschreibungen für euer Gelenkpulver, Magen-Darm-Pulver und alle Produkte. In eurem Ton, mit medizinischer Genauigkeit, in Deutsch und Englisch gleichzeitig.</div></div>
-      <div class="usecase reveal"><div class="usecase-icon usecase-icon-2"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A882" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="usecase-title">Kundenbewertungen auswerten</div><div class="usecase-body">253.000+ Bewertungen bei Trusted Shops. Claude analysiert Muster: Welche Produkte werden am meisten gelobt? Welche Beschwerden häufen sich? Wo ist Produktentwicklungs-Potenzial?</div></div>
-      <div class="usecase reveal"><div class="usecase-icon usecase-icon-3"><svg viewBox="0 0 24 24" fill="none" stroke="#5AEAAD" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div><div class="usecase-title">Ads & Kampagnen</div><div class="usecase-body">Facebook Ads, Google Shopping, Instagram Stories — Claude schreibt die Copy, schlägt Zielgruppen vor, analysiert was funktioniert. A/B-Test-Varianten in Sekunden statt Stunden.</div></div>
-      <div class="usecase reveal"><div class="usecase-icon usecase-icon-4"><svg viewBox="0 0 24 24" fill="none" stroke="#F07A5E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="usecase-title">Internationalisierung</div><div class="usecase-body">Euer Shop ist bereits auf Englisch verfügbar. Claude übersetzt nicht nur — es lokalisiert. Produkttexte, SEO-Meta-Tags, Kundenservice-Templates für jeden Markt.</div></div>
+    <div class="section-number reveal">02 &mdash; claude.ai &mdash; Der Chat</div>
+    <h2 class="section-title reveal">F&uuml;r <em>jeden.</em><br>Sofort. Im Browser.</h2>
+    <p class="section-body reveal">Der einfachste Einstieg: claude.ai im Browser &ouml;ffnen und lostippen. Kein Download, kein Setup. Web-Suche in Echtzeit, Datei-Upload, Bildanalyse, Memory, Projekte. Funktioniert auf Desktop, Tablet und Smartphone.</p>
+    <div class="cards-grid">
+      <div class="card reveal"><div class="card-tag">Web Search</div><div class="card-title">Echtzeit-Recherche</div><div class="card-body">Claude durchsucht das Internet live. Marktanalysen, Konkurrenzbeobachtung, Trend-Recherche &mdash; mit Quellenangaben. Keine veralteten Daten mehr.</div></div>
+      <div class="card reveal"><div class="card-tag">Dateien</div><div class="card-title">Upload & Analyse</div><div class="card-body">PDFs, Excel-Tabellen, Bilder hochladen. Claude liest, versteht und fasst zusammen. Vertr&auml;ge pr&uuml;fen, Angebote vergleichen, Rechnungen auswerten.</div></div>
+      <div class="card reveal"><div class="card-tag">Projekte</div><div class="card-title">Eure Wissensbasis</div><div class="card-body">Ladet Dokumente in Projekte hoch &mdash; Claude nutzt sie dauerhaft als Kontext. Euer Marken-Styleguide, Produktkatalog, FAQ-Sammlung: immer griffbereit.</div></div>
+      <div class="card reveal"><div class="card-tag">Memory</div><div class="card-title">Claude lernt mit</div><div class="card-body">Claude merkt sich euren Schreibstil, eure Produkte, eure Vorlieben. Je l&auml;nger ihr zusammenarbeitet, desto besser werden die Ergebnisse. Kostenlos f&uuml;r alle.</div></div>
     </div>
   </div>
 </section>
 <hr class="glow-div">
-<section class="section glow-iris" id="s04">
+
+<!-- 03 DESKTOP APP & COWORK -->
+<section class="section glow-iris" id="s03">
   <div class="section-inner">
-    <div class="section-number reveal">04 — Content & Marketing</div>
-    <h2 class="section-title reveal">Euer Blog hat 4 Kategorien.<br>Claude füllt sie mit <em>Qualität.</em></h2>
-    <p class="section-body reveal">Gesundheit, Ernährung & Körper. Lifestyle, Alltag & Community. Training, Sport & Verhalten. Wissen, Rassen & Lebensphasen. Claude schreibt Artikel, die ranken und konvertieren.</p>
+    <div class="section-number reveal">03 &mdash; Desktop App & Cowork</div>
+    <h2 class="section-title reveal">Ein Kollege, der auf eurem <em>Rechner lebt.</em></h2>
+    <p class="section-body reveal">Die Claude Desktop App f&uuml;r macOS und Windows verwandelt Claude in einen persistenten Assistenten. Cowork ist der Arbeitsmodus: Claude greift auf eure lokalen Dateien zu, erstellt Spreadsheets, formatiert Dokumente &mdash; und arbeitet auch weiter, wenn ihr einen Kaffee holt.</p>
     <div class="cards-grid cards-3">
-      <div class="card reveal"><div class="card-tag">Blog</div><div class="card-title">SEO-Artikel</div><div class="card-body">Keyword-recherchierte, fachlich fundierte Artikel für organischen Traffic. "Gelenkprobleme beim Hund" — in 15 Minuten statt 4 Stunden.</div></div>
-      <div class="card reveal"><div class="card-tag">Social</div><div class="card-title">Instagram & Facebook</div><div class="card-body">Redaktionspläne, Post-Texte, Story-Konzepte, Hashtag-Strategien. Ein ganzer Monat Content in einer Session.</div></div>
+      <div class="card reveal"><div class="card-tag">Dateizugriff</div><div class="card-title">Lokale Dateien</div><div class="card-body">Claude liest und schreibt direkt auf eure Festplatte. Keine Uploads n&ouml;tig. Ihr gebt Ordner frei, Claude erledigt den Rest in einer isolierten VM.</div></div>
+      <div class="card reveal"><div class="card-tag">Output</div><div class="card-title">Fertige Deliverables</div><div class="card-body">Keine Textschnipsel zum Kopieren. Claude liefert fertige Excel-Dateien mit Formeln, formatierte Word-Dokumente, PowerPoint-Pr&auml;sentationen. Druckfertig.</div></div>
+      <div class="card reveal"><div class="card-tag">Zeitplan</div><div class="card-title">Scheduled Tasks</div><div class="card-body">Mit /schedule erstellt ihr wiederkehrende Aufgaben. Jeden Freitag die Wochenzahlen ziehen. Jeden Morgen die E-Mails zusammenfassen. Claude macht es automatisch.</div></div>
+    </div>
+  </div>
+</section>
+<hr class="glow-div">
+
+<!-- 04 COMPUTER USE & DISPATCH -->
+<section class="section glow-warm" id="s04">
+  <div class="section-inner">
+    <div class="section-number reveal">04 &mdash; Computer Use & Dispatch</div>
+    <h2 class="section-title reveal">Claude steuert euren <em>Computer.</em></h2>
+    <p class="section-body reveal">Das neueste Feature &mdash; seit 23. M&auml;rz 2026. Claude sieht euren Bildschirm, klickt Buttons, &ouml;ffnet Apps, f&uuml;llt Tabellen aus und navigiert den Browser. Kein Setup, keine Plugins. Und mit Dispatch schickt ihr Aufgaben vom iPhone &mdash; Claude erledigt sie auf eurem Mac.</p>
+    <div class="cards-grid">
+      <div class="card reveal"><div class="card-tag">Computer Use</div><div class="card-title">Klicken, Tippen, Navigieren</div><div class="card-body">Claude steuert Tastatur und Maus direkt. Apps &ouml;ffnen, Browser navigieren, Formulare ausf&uuml;llen. Per-App-Berechtigungen sorgen f&uuml;r Sicherheit &mdash; ihr behaltet die Kontrolle.</div></div>
+      <div class="card reveal"><div class="card-tag">Dispatch</div><div class="card-title">iPhone &rarr; Mac</div><div class="card-body">Unterwegs eine Aufgabe per Handy an Claude schicken. Claude arbeitet auf eurem Desktop, w&auml;hrend ihr unterwegs seid. Zur&uuml;ckkommen, Ergebnis reviewen. Fertig.</div></div>
+      <div class="card reveal"><div class="card-tag">Connector-First</div><div class="card-title">Intelligente Priorisierung</div><div class="card-body">Claude nutzt zuerst direkte Integrationen (Gmail, Slack, Drive). Nur wenn kein Connector verf&uuml;gbar ist, greift es auf die Bildschirmsteuerung zur&uuml;ck. Schneller und pr&auml;ziser.</div></div>
+      <div class="card reveal"><div class="card-tag">Sicherheit</div><div class="card-title">Permission-First</div><div class="card-body">Jede neue App braucht eure Freigabe. Sensible Apps (Banking, Crypto) sind standardm&auml;&szlig;ig blockiert. Ihr seht jeden Schritt und k&ouml;nnt jederzeit stoppen.</div></div>
+    </div>
+  </div>
+</section>
+<hr class="glow-div">
+
+<!-- 05 CLAUDE CODE CLI -->
+<section class="section glow-iris" id="s05">
+  <div class="section-inner">
+    <div class="section-number reveal">05 &mdash; Claude Code</div>
+    <h2 class="section-title reveal">Euer Entwickler im <em>Terminal.</em></h2>
+    <p class="section-body reveal">Claude Code ist ein Kommandozeilen-Tool f&uuml;r Entwickler. Es liest eure Codebase, schreibt Features, fixt Bugs, erstellt Tests und deployed &mdash; direkt im Terminal. Auto Mode entscheidet eigenst&auml;ndig &uuml;ber Berechtigungen. &Uuml;ber 2,5 Milliarden Dollar Umsatz &mdash; das am schnellsten wachsende Developer-Tool der Geschichte.</p>
+    <div class="cards-grid cards-3">
+      <div class="card reveal"><div class="card-tag">Auto Mode</div><div class="card-title">Autonomes Coding</div><div class="card-body">Claude entscheidet selbst: Harmlose Aktionen laufen sofort. Riskante Aktionen (L&ouml;schen, Systembefehle) fragen nach Erlaubnis. Aufgabe geben, Kaffee holen, zur&uuml;ckkommen.</div></div>
+      <div class="card reveal"><div class="card-tag">Agent Teams</div><div class="card-title">Parallele Agenten</div><div class="card-body">Mehrere KI-Agenten arbeiten gleichzeitig an verschiedenen Teilen eurer Aufgabe. Refactoring von 40 Dateien? Nicht sequenziell &mdash; parallel.</div></div>
+      <div class="card reveal"><div class="card-tag">Voice Mode</div><div class="card-title">Code per Stimme</div><div class="card-body">Push-to-Talk in 20 Sprachen. Code schreiben, debuggen und deployen per Sprachbefehl. Freih&auml;ndig programmieren.</div></div>
+    </div>
+  </div>
+</section>
+<hr class="glow-div">
+
+<!-- 06 VIBE DESIGN: FIGMA & CANVA -->
+<section class="section glow-warm" id="s06">
+  <div class="section-inner">
+    <div class="section-number reveal">06 &mdash; Vibe Design: Figma & Canva</div>
+    <h2 class="section-title reveal">Design direkt <em>aus dem Chat.</em></h2>
+    <p class="section-body reveal">Claude verbindet sich direkt mit Figma und Canva &mdash; kein Tab-Wechsel, kein Export. Ihr beschreibt was ihr wollt, Claude erstellt es. Flowcharts in FigJam, Pr&auml;sentationen in Canva, UI-Designs in Figma. Alles &uuml;ber MCP &mdash; das universelle Protokoll, das Claude mit euren Tools verbindet.</p>
+    <div class="cards-grid">
+      <div class="card reveal"><div class="card-tag">Figma MCP</div><div class="card-title">Code to Canvas</div><div class="card-body">Claude Code baut eine UI &rarr; ein Befehl schickt sie als editierbare Figma-Frames. Keine Screenshots. Echte Design-Artefakte mit euren Komponenten und Design-Tokens. Bidirektional.</div></div>
+      <div class="card reveal"><div class="card-tag">Canva MCP</div><div class="card-title">Decks & Designs</div><div class="card-body">Pr&auml;sentationsfolien, Social-Media-Posts, Flyer &mdash; Claude erstellt sie direkt in Canva. Branding anpassen, Export starten, alles aus dem Chat heraus.</div></div>
+      <div class="card reveal"><div class="card-tag">FigJam</div><div class="card-title">Diagramme & Flows</div><div class="card-body">Flowcharts, Gantt-Charts, User Flows, Systemarchitekturen &mdash; Claude generiert sie in FigJam. Aus Text, PDFs oder Bildern. Gemeinsam bearbeitbar.</div></div>
+      <div class="card reveal"><div class="card-tag">9+ Apps</div><div class="card-title">Slack, Asana, Hex&hellip;</div><div class="card-body">Neben Figma und Canva: Slack-Nachrichten, Asana-Projekte, Amplitude-Charts, Box-Dateien, Monday-Workflows. Alles aus einer Oberfl&auml;che. Kein Tab-Chaos.</div></div>
+    </div>
+  </div>
+</section>
+<hr class="glow-div">
+
+<!-- 07 SHOPIFY & E-COMMERCE -->
+<section class="section glow-iris" id="s07">
+  <div class="section-inner">
+    <div class="section-number reveal">07 &mdash; E-Commerce & Shopify</div>
+    <h2 class="section-title reveal">Was das konkret f&uuml;r <em>Bones Hands</em> bedeutet.</h2>
+    <p class="section-body reveal">Euer Shopify-Shop, eure 39 Produkte, eure 253.000+ Bewertungen &mdash; Claude kennt euer Business und macht es besser.</p>
+    <div class="usecase-grid">
+      <div class="usecase reveal"><div class="usecase-icon usecase-icon-1"><svg viewBox="0 0 24 24" fill="none" stroke="#8B7CF6" stroke-width="1.5"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg></div><div class="usecase-title">Produktbeschreibungen</div><div class="usecase-body">SEO-optimierte Beschreibungen f&uuml;r Gelenkpulver, Magen-Darm-Pulver und alle Produkte. In eurem Ton, mit medizinischer Genauigkeit, Deutsch und Englisch gleichzeitig.</div></div>
+      <div class="usecase reveal"><div class="usecase-icon usecase-icon-2"><svg viewBox="0 0 24 24" fill="none" stroke="#C8A882" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div><div class="usecase-title">Bewertungen auswerten</div><div class="usecase-body">253.000+ Bewertungen bei Trusted Shops. Claude analysiert Muster: Welche Produkte werden am meisten gelobt? Welche Beschwerden h&auml;ufen sich? Wo ist Potenzial?</div></div>
+      <div class="usecase reveal"><div class="usecase-icon usecase-icon-3"><svg viewBox="0 0 24 24" fill="none" stroke="#5AEAAD" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg></div><div class="usecase-title">Ads & Kampagnen</div><div class="usecase-body">Facebook Ads, Google Shopping, Instagram Stories &mdash; Claude schreibt die Copy, schl&auml;gt Zielgruppen vor, erstellt A/B-Test-Varianten in Sekunden.</div></div>
+      <div class="usecase reveal"><div class="usecase-icon usecase-icon-4"><svg viewBox="0 0 24 24" fill="none" stroke="#F07A5E" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div><div class="usecase-title">Internationalisierung</div><div class="usecase-body">Euer Shop ist bereits auf Englisch. Claude &uuml;bersetzt nicht nur &mdash; es lokalisiert. Produkttexte, SEO-Meta-Tags, Kundenservice-Templates f&uuml;r jeden Markt.</div></div>
+    </div>
+  </div>
+</section>
+<hr class="glow-div">
+
+<!-- 08 CONTENT & MARKETING -->
+<section class="section glow-warm" id="s08">
+  <div class="section-inner">
+    <div class="section-number reveal">08 &mdash; Content & Marketing</div>
+    <h2 class="section-title reveal">4 Blog-Kategorien.<br>Claude f&uuml;llt sie mit <em>Qualit&auml;t.</em></h2>
+    <p class="section-body reveal">Gesundheit & Ern&auml;hrung. Lifestyle & Community. Training & Verhalten. Wissen & Lebensphasen. Claude schreibt Artikel die ranken, Social Posts die konvertieren, E-Mails die &ouml;ffnen.</p>
+    <div class="cards-grid cards-3">
+      <div class="card reveal"><div class="card-tag">Blog</div><div class="card-title">SEO-Artikel</div><div class="card-body">Keyword-recherchierte, fachlich fundierte Artikel f&uuml;r organischen Traffic. "Gelenkprobleme beim Hund" &mdash; in 15 Minuten statt 4 Stunden.</div></div>
+      <div class="card reveal"><div class="card-tag">Social</div><div class="card-title">Instagram & Facebook</div><div class="card-body">Redaktionspl&auml;ne, Post-Texte, Story-Konzepte, Hashtag-Strategien. Ein ganzer Monat Content in einer Session.</div></div>
       <div class="card reveal"><div class="card-tag">E-Mail</div><div class="card-title">Newsletter & Flows</div><div class="card-body">Willkommens-Sequenzen, Abandoned Cart Mails, Produkt-Launch-Kampagnen. Personalisiert, mit psychologischen Triggern.</div></div>
     </div>
   </div>
 </section>
-<div class="quote-section">
-  <span class="quote-mark reveal">&ldquo;</span>
-  <p class="quote-text reveal">KI ersetzt nicht eure Expertise für Tiergesundheit. Sie befreit euch von allem, was euch davon abhält, diese Expertise einzusetzen.</p>
-  <span class="quote-attr reveal">Das Versprechen von Claude als Werkzeug</span>
+
+<!-- BIG NUMBER -->
+<div class="big-section">
+  <div class="big-num reveal">10x</div>
+  <div class="big-label">Produktivit&auml;tssteigerung</div>
+  <div class="big-sub">Harvard-Studie: KI-unterst&uuml;tzte Wissensarbeiter sind bis zu 40% schneller. Power User berichten von 10-facher Effizienz bei Routineaufgaben.</div>
 </div>
 <hr class="glow-div">
-<section class="section glow-warm" id="s05">
+
+<!-- 09 POWER USER -->
+<section class="section glow-iris" id="s09">
   <div class="section-inner">
-    <div class="section-number reveal">05 — Kundenservice & Automatisierung</div>
-    <h2 class="section-title reveal">Weniger Routine.<br>Mehr <em>Wirkung.</em></h2>
-    <p class="section-body reveal">Eure Kunden lieben den persönlichen Service — das zeigen die Bewertungen. Claude nimmt euch die Routine ab, damit ihr mehr Zeit für das habt, was zählt.</p>
-    <div class="cards-grid">
-      <div class="card reveal"><div class="card-tag">Support</div><div class="card-title">Antwort-Templates</div><div class="card-body">Die häufigsten Kundenfragen zu Dosierung, Versand, Rücksendung — Claude erstellt maßgeschneiderte Antwortvorlagen. Persönlich klingend, fachlich korrekt.</div></div>
-      <div class="card reveal"><div class="card-tag">Analyse</div><div class="card-title">Feedback-Auswertung</div><div class="card-body">Kundenmails, WhatsApp-Nachrichten, Bewertungen — Claude erkennt Muster und Stimmungen. "80% der Beschwerden betreffen Lieferzeiten" — in Sekunden.</div></div>
-      <div class="card reveal"><div class="card-tag">Workflow</div><div class="card-title">Shopify-Automatisierung</div><div class="card-body">Bestandswarnungen, Preisberechnungen, Metafield-Updates, Collection-Sorting — Claude schreibt die Scripts. Kein Entwickler nötig.</div></div>
-      <div class="card reveal"><div class="card-tag">Daten</div><div class="card-title">Reports & Dashboards</div><div class="card-body">Monatliche Verkaufsanalysen, Bestseller-Rankings, Kundenakquise-Kosten — Claude erstellt visuelle Reports als PDF oder Excel.</div></div>
-    </div>
-  </div>
-</section>
-<hr class="glow-div">
-<section class="section glow-iris" id="s06">
-  <div class="section-inner">
-    <div class="section-number reveal">06 — Power User werden</div>
+    <div class="section-number reveal">09 &mdash; Power User werden</div>
     <h2 class="section-title reveal">Der Unterschied zwischen <em>nutzen</em> und <em>beherrschen.</em></h2>
-    <p class="section-body reveal">Die meisten Menschen nutzen KI wie eine Suchmaschine. Power User nutzen sie wie einen Mitarbeiter. Der Unterschied: Ergebnisse, die 10x besser sind.</p>
+    <p class="section-body reveal">Die meisten Menschen nutzen KI wie eine Suchmaschine. Power User nutzen sie wie einen Mitarbeiter.</p>
     <div class="feature-list">
-      <div class="feature-item reveal"><div class="feature-num">01</div><div class="feature-text"><strong>Kontext geben, nicht nur fragen</strong><p>"Schreib eine Produktbeschreibung" vs. "Du bist Texter für einen Premium-Tierbedarf-Shop. Unsere Kunden sind Hundebesitzer 30-55, die bereit sind für Qualität zu zahlen. Schreib die Beschreibung für unser Gelenkpulver."</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">02</div><div class="feature-text"><strong>Memory & Projekte nutzen</strong><p>Claude merkt sich eure Marke, euren Ton, eure Produktpalette. In Projekten könnt ihr Dokumente hochladen, die Claude dauerhaft als Wissensbasis nutzt.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">03</div><div class="feature-text"><strong>Workflows statt Einzelaufgaben</strong><p>"Erstelle einen Redaktionsplan für April mit 12 Posts, passend zu unseren Produktlaunches, inklusive Texte, Hashtags und beste Posting-Zeiten."</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">04</div><div class="feature-text"><strong>Dateien hochladen und verarbeiten</strong><p>Ladet euren kompletten Produktkatalog als CSV hoch. Claude erstellt daraus SEO-Titel, Meta-Descriptions und Alt-Texte für alle 39 Produkte — in einem Durchlauf.</p></div></div>
-      <div class="feature-item reveal"><div class="feature-num">05</div><div class="feature-text"><strong>Iterieren statt akzeptieren</strong><p>"Das ist gut, aber mach den Ton wärmer." "Kürze das um 30%." "Füge einen medizinischen Disclaimer hinzu." Claude wird mit jedem Feedback besser — in Echtzeit.</p></div></div>
+      <div class="feature-item reveal"><div class="feature-num">01</div><div class="feature-text"><strong>Kontext geben, nicht nur fragen</strong><p>"Schreib eine Produktbeschreibung" vs. "Du bist Texter f&uuml;r einen Premium-Tierbedarf-Shop. Unsere Kunden sind Hundebesitzer 30-55, die f&uuml;r Qualit&auml;t zahlen. Schreib die Beschreibung f&uuml;r unser Gelenkpulver."</p></div></div>
+      <div class="feature-item reveal"><div class="feature-num">02</div><div class="feature-text"><strong>Memory & Projekte nutzen</strong><p>Claude merkt sich eure Marke, euren Ton, eure Produktpalette. In Projekten ladet ihr Dokumente hoch, die Claude dauerhaft als Wissensbasis nutzt.</p></div></div>
+      <div class="feature-item reveal"><div class="feature-num">03</div><div class="feature-text"><strong>Workflows statt Einzelaufgaben</strong><p>"Erstelle einen Redaktionsplan f&uuml;r April mit 12 Posts, passend zu unseren Produktlaunches, inklusive Texte, Hashtags und beste Posting-Zeiten."</p></div></div>
+      <div class="feature-item reveal"><div class="feature-num">04</div><div class="feature-text"><strong>Dateien hochladen und verarbeiten</strong><p>Kompletter Produktkatalog als CSV hochladen. Claude erstellt daraus SEO-Titel, Meta-Descriptions und Alt-Texte f&uuml;r alle 39 Produkte &mdash; in einem Durchlauf.</p></div></div>
+      <div class="feature-item reveal"><div class="feature-num">05</div><div class="feature-text"><strong>Iterieren statt akzeptieren</strong><p>"Mach den Ton w&auml;rmer." "K&uuml;rze das um 30%." "F&uuml;ge einen Disclaimer hinzu." Claude wird mit jedem Feedback besser &mdash; in Echtzeit.</p></div></div>
     </div>
   </div>
 </section>
 <hr class="glow-div">
-<section class="section" id="s07">
+
+<!-- 10 PREISE -->
+<section class="section" id="s10">
   <div class="section-inner" style="display:flex;flex-direction:column;align-items:center">
-    <div class="section-number reveal" style="text-align:center">07 — Pläne & Preise</div>
-    <h2 class="section-title reveal" style="text-align:center">Was kostet ein Mitarbeiter,<br>der <em>nie schläft?</em></h2>
+    <div class="section-number reveal" style="text-align:center">10 &mdash; Pl&auml;ne & Preise</div>
+    <h2 class="section-title reveal" style="text-align:center">Was kostet ein Mitarbeiter,<br>der <em>nie schl&auml;ft?</em></h2>
     <div class="compare-wrap reveal">
       <table class="compare-table">
-        <thead><tr><th>Plan</th><th>Preis</th><th>Ideal für</th><th>Highlights</th></tr></thead>
+        <thead><tr><th>Plan</th><th>Preis</th><th>Zugang zu</th><th>Ideal f&uuml;r</th></tr></thead>
         <tbody>
-          <tr><td>Free</td><td>0 EUR</td><td>Ausprobieren</td><td>Sonnet 4.6, begrenzte Nachrichten, Web-Suche</td></tr>
-          <tr class="hl"><td>Pro <span class="badge badge-rec">Empfohlen</span></td><td>~18 EUR/Monat</td><td>Power User</td><td>Opus 4.6, 5x mehr Nutzung, Projekte, Memory</td></tr>
-          <tr><td>Max</td><td>~90-180 EUR/Monat</td><td>Heavy User</td><td>Cowork, Computer Use, Claude Code</td></tr>
-          <tr><td>Teams</td><td>~23 EUR/User/Monat</td><td>Euer ganzes Team</td><td>Geteilte Projekte, Admin-Controls</td></tr>
+          <tr><td>Free</td><td>0 EUR</td><td>Chat, Web Search, Dateien</td><td>Ausprobieren</td></tr>
+          <tr class="hl"><td>Pro <span class="badge badge-rec">Empfohlen</span></td><td>~18 EUR/Monat</td><td>+ Opus 4.6, Projekte, Memory, Cowork, Computer Use</td><td>Power User</td></tr>
+          <tr><td>Max</td><td>~90-180 EUR/Monat</td><td>+ Claude Code, Agent Teams, maximale Nutzung</td><td>Heavy User & Devs</td></tr>
+          <tr><td>Teams</td><td>~23 EUR/User/Monat</td><td>+ Team-Workspaces, Admin-Controls, geteilte Projekte</td><td>Euer ganzes Team</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="section-body reveal" style="text-align:center;margin-top:32px;max-width:580px">Zum Vergleich: Ein Werkstudent für Content kostet circa 12 EUR pro Stunde. Claude Pro kostet 18 EUR pro Monat — und arbeitet rund um die Uhr, ohne Urlaubsanspruch.</p>
+    <p class="section-body reveal" style="text-align:center;margin-top:32px;max-width:580px">Zum Vergleich: Ein Werkstudent f&uuml;r Content kostet circa 12 EUR pro Stunde. Claude Pro kostet 18 EUR pro Monat &mdash; und arbeitet rund um die Uhr.</p>
+  </div>
+</section>
+
+<!-- QUOTE -->
+<div class="quote-section">
+  <span class="quote-mark reveal">&ldquo;</span>
+  <p class="quote-text reveal">KI ersetzt nicht eure Expertise f&uuml;r Tiergesundheit. Sie befreit euch von allem, was euch davon abh&auml;lt, diese Expertise einzusetzen.</p>
+  <span class="quote-attr reveal">Das Versprechen von Claude als Werkzeug</span>
+</div>
+<hr class="glow-div">
+
+<!-- 11 QUINTESSENZ -->
+<section class="section glow-iris" id="s11">
+  <div class="section-inner" style="display:flex;flex-direction:column;align-items:center;text-align:center">
+    <div class="section-number reveal">11 &mdash; Die Quintessenz</div>
+    <h2 class="section-title reveal" style="text-align:center;max-width:900px">F&uuml;r <em>jede Arbeitsweise</em><br>eine Erg&auml;nzung.</h2>
+    <p class="section-body reveal" style="text-align:center;max-width:640px">Der Chef, der im Browser schnell eine Analyse braucht? Claude Chat. Die Marketing-Managerin, die Canva-Decks und Social Posts erstellt? Claude mit MCP-Apps. Der Entwickler, der den Shopify-Theme-Code anpasst? Claude Code im Terminal. Die Assistenz, die jeden Morgen Reports braucht? Cowork mit Scheduled Tasks. Der Gesch&auml;ftsf&uuml;hrer, der unterwegs eine Aufgabe delegiert? Dispatch vom iPhone.</p>
+    <div class="cards-grid" style="margin-top:48px;max-width:900px">
+      <div class="card reveal" style="text-align:center"><div class="card-tag">Kernbotschaft</div><div class="card-title">Menschen werden nicht ersetzt</div><div class="card-body">Claude ist ein Werkzeug &mdash; wie Excel, wie Shopify, wie ein Telefon. Es verst&auml;rkt, was ihr k&ouml;nnt. Eure Expertise in Tiergesundheit, eure Kundenbeziehungen, euer Gesp&uuml;r f&uuml;r Produkte &mdash; das bleibt unersetzbar.</div></div>
+      <div class="card reveal" style="text-align:center"><div class="card-tag">Realit&auml;t</div><div class="card-title">Produktivere Menschen gewinnen</div><div class="card-body">Wenn &uuml;berhaupt jemand ersetzt wird, dann nicht von KI &mdash; sondern von Menschen, die KI nutzen. Der Unterschied ist nicht Technik vs. Mensch. Es ist: Wer nutzt die neuen Werkzeuge, und wer wartet ab?</div></div>
+    </div>
+    <p class="section-body reveal" style="text-align:center;max-width:600px;margin-top:36px;color:var(--warm-light);font-weight:400">Es ist f&uuml;r jeden etwas dabei. Egal ob ihr Excel-Tabellen baut, Hundepulver vermarktet oder Code schreibt. Die Frage ist nicht ob, sondern wann.</p>
   </div>
 </section>
 <hr class="glow-div">
-<section class="section" id="s08">
+
+<!-- 12 FAQ -->
+<section class="section" id="s12">
   <div class="section-inner" style="display:flex;flex-direction:column;align-items:center">
-    <div class="section-number reveal" style="text-align:center">08 — Häufige Fragen</div>
+    <div class="section-number reveal" style="text-align:center">12 &mdash; H&auml;ufige Fragen</div>
     <h2 class="section-title reveal" style="text-align:center">Eure Fragen.<br>Ehrliche <em>Antworten.</em></h2>
     <div class="accordion reveal">
-      <div class="acc-item"><div class="acc-header"><span class="acc-q">Ersetzt Claude unsere Mitarbeiter?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Nein. Claude ersetzt keine Menschen — es verstärkt sie. Eure Expertise in Tiergesundheit, eure Kundenbeziehungen, euer Gespür für Produkte — das kann keine KI. Was Claude kann: die Routinearbeit übernehmen, die euch davon abhält, diese Stärken voll einzusetzen.</div></div></div>
-      <div class="acc-item"><div class="acc-header"><span class="acc-q">Sind unsere Daten bei Claude sicher?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Anthropic trainiert <strong>nicht auf euren Daten</strong>. Bei Pro- und Team-Plänen werden Gespräche nicht für Training verwendet. Anthropic hat sogar Pentagon-Aufträge abgelehnt, um seine Sicherheitsstandards zu halten.</div></div></div>
-      <div class="acc-item"><div class="acc-header"><span class="acc-q">Wie schnell sehen wir Ergebnisse?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner"><strong>Sofort.</strong> Am ersten Tag könnt ihr Produktbeschreibungen schreiben, Blog-Artikel erstellen, E-Mail-Templates bauen. Innerhalb einer Woche habt ihr wiederkehrende Workflows etabliert. Nach einem Monat fragt ihr euch, wie ihr je ohne gearbeitet habt.</div></div></div>
-      <div class="acc-item"><div class="acc-header"><span class="acc-q">Was ist besser — ChatGPT oder Claude?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Claude übertrifft GPT-4o in den meisten Benchmarks für <strong>Textqualität, Analyse und Coding</strong>. Der größte Unterschied: Claude klingt natürlicher, folgt Anweisungen präziser und halluziniert weniger. Für E-Commerce-Texte ist Claude die bessere Wahl.</div></div></div>
-      <div class="acc-item"><div class="acc-header"><span class="acc-q">Brauchen wir technisches Wissen?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner"><strong>Null.</strong> Claude funktioniert wie WhatsApp — ihr schreibt, Claude antwortet. Kein Code, keine Installation, kein Setup. Browser öffnen, claude.ai, loslegen.</div></div></div>
+      <div class="acc-item"><div class="acc-header"><span class="acc-q">Ersetzt Claude unsere Mitarbeiter?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Nein. Claude ersetzt keine Menschen &mdash; es verst&auml;rkt sie. Was Claude kann: die Routinearbeit &uuml;bernehmen, die euch davon abh&auml;lt, eure St&auml;rken voll einzusetzen. Wenn &uuml;berhaupt, werden Menschen von produktiveren Menschen ersetzt &mdash; nicht von KI.</div></div></div>
+      <div class="acc-item"><div class="acc-header"><span class="acc-q">Sind unsere Daten bei Claude sicher?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Anthropic trainiert <strong>nicht auf euren Daten</strong>. Bei Pro- und Team-Pl&auml;nen werden Gespr&auml;che nicht f&uuml;r Training verwendet. Cowork l&auml;uft in einer isolierten VM auf eurem Rechner.</div></div></div>
+      <div class="acc-item"><div class="acc-header"><span class="acc-q">Was ist besser &mdash; ChatGPT oder Claude?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Claude &uuml;bertrifft GPT-4o in den meisten Benchmarks f&uuml;r <strong>Textqualit&auml;t, Analyse und Coding</strong>. Claude klingt nat&uuml;rlicher, folgt Anweisungen pr&auml;ziser und halluziniert weniger.</div></div></div>
+      <div class="acc-item"><div class="acc-header"><span class="acc-q">Brauchen wir technisches Wissen?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner"><strong>Null.</strong> Claude Chat funktioniert wie WhatsApp. F&uuml;r Cowork und Desktop braucht ihr nur die App zu installieren. Nur Claude Code richtet sich an Entwickler. F&uuml;r alles andere: Browser &ouml;ffnen, loslegen.</div></div></div>
+      <div class="acc-item"><div class="acc-header"><span class="acc-q">Wie starten wir am besten?</span><div class="acc-icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="1.5"><line x1="6" y1="0" x2="6" y2="12"/><line x1="0" y1="6" x2="12" y2="6"/></svg></div></div><div class="acc-body"><div class="acc-body-inner">Startet mit dem Free-Plan auf claude.ai. Testet Produktbeschreibungen, Blog-Artikel, E-Mail-Templates. Wenn ihr den Wert seht, upgradet auf Pro f&uuml;r 18 EUR/Monat. F&uuml;r das ganze Team: Teams-Plan f&uuml;r 23 EUR/User. Ergebnisse kommen am ersten Tag.</div></div></div>
     </div>
   </div>
 </section>
+
+<!-- OUTRO -->
 <section id="outro">
   <h2 class="outro-title reveal">Let's <em>start.</em></h2>
   <div class="divider-sm"></div>
-  <p class="outro-sub reveal">Der beste Zeitpunkt KI zu integrieren war gestern. Der zweitbeste ist jetzt. Bones Hands hat die Produkte, die Bewertungen, das Team — Claude liefert den Multiplikator.</p>
+  <p class="outro-sub reveal">Der beste Zeitpunkt KI zu integrieren war gestern. Der zweitbeste ist jetzt. Bones Hands hat die Produkte, die Bewertungen, das Team &mdash; Claude liefert den Multiplikator.</p>
   <a href="https://claude.ai" class="cta-btn reveal" target="_blank" rel="noopener">Claude kostenlos testen &rarr;</a>
-  <p class="outro-meta reveal">Präsentation erstellt von while.chat · SEO, Content & KI-Beratung für KMU · Alle Daten Stand März 2026</p>
+  <p class="outro-meta reveal">Pr&auml;sentation erstellt von while.chat &middot; SEO, Content & KI-Beratung f&uuml;r KMU &middot; Alle Daten Stand M&auml;rz 2026</p>
 </section>
+
 <script>
 (function(){const c=document.getElementById('hero-canvas');if(!c||window.innerWidth<600)return;const r=new THREE.WebGLRenderer({canvas:c,alpha:true,antialias:true});r.setPixelRatio(Math.min(devicePixelRatio,2));r.setSize(window.innerWidth,window.innerHeight);const scene=new THREE.Scene();const cam=new THREE.PerspectiveCamera(55,window.innerWidth/window.innerHeight,0.1,100);cam.position.z=7;const g1=new THREE.IcosahedronGeometry(2.2,1);const m1=new THREE.MeshStandardMaterial({color:0x8B7CF6,wireframe:true,transparent:true,opacity:0.06});const mesh1=new THREE.Mesh(g1,m1);scene.add(mesh1);const g2=new THREE.OctahedronGeometry(1.2,0);const m2=new THREE.MeshStandardMaterial({color:0xC8A882,wireframe:true,transparent:true,opacity:0.09});const mesh2=new THREE.Mesh(g2,m2);mesh2.position.set(4,-1.5,-3);scene.add(mesh2);const g3=new THREE.TorusGeometry(0.9,0.25,16,40);const m3=new THREE.MeshStandardMaterial({color:0x5AEAAD,wireframe:true,transparent:true,opacity:0.05});const mesh3=new THREE.Mesh(g3,m3);mesh3.position.set(-4.5,2.5,-4);scene.add(mesh3);const g4=new THREE.DodecahedronGeometry(0.7,0);const m4=new THREE.MeshStandardMaterial({color:0xF07A5E,wireframe:true,transparent:true,opacity:0.07});const mesh4=new THREE.Mesh(g4,m4);mesh4.position.set(-2,-3,-2);scene.add(mesh4);const pg=new THREE.BufferGeometry();const cnt=1500;const pos=new Float32Array(cnt*3);for(let i=0;i<cnt*3;i++)pos[i]=(Math.random()-0.5)*18;pg.setAttribute('position',new THREE.BufferAttribute(pos,3));const pm=new THREE.PointsMaterial({color:0x8B7CF6,size:0.01,transparent:true,opacity:0.3});scene.add(new THREE.Points(pg,pm));scene.add(new THREE.AmbientLight(0xffffff,0.35));const dl=new THREE.DirectionalLight(0xffffff,0.7);dl.position.set(5,5,5);scene.add(dl);let mx=0,my=0;document.addEventListener('mousemove',e=>{mx=(e.clientX/window.innerWidth-0.5)*2;my=(e.clientY/window.innerHeight-0.5)*2});function animate(){requestAnimationFrame(animate);mesh1.rotation.y+=0.002;mesh1.rotation.x+=0.0008;mesh2.rotation.y-=0.003;mesh2.rotation.z+=0.0015;mesh3.rotation.x+=0.004;mesh3.rotation.y+=0.002;mesh4.rotation.y+=0.005;mesh4.rotation.x-=0.003;cam.position.x+=(mx*0.4-cam.position.x)*0.015;cam.position.y+=(-my*0.25-cam.position.y)*0.015;cam.lookAt(scene.position);r.render(scene,cam)}animate();window.addEventListener('resize',()=>{r.setSize(window.innerWidth,window.innerHeight);cam.aspect=window.innerWidth/window.innerHeight;cam.updateProjectionMatrix()});if(window.innerWidth<768)c.style.opacity='0.35'})();
 const obs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}})},{threshold:0.1,rootMargin:'0px 0px -30px 0px'});document.querySelectorAll('.reveal,.stat,.card,.feature-item,.usecase').forEach(el=>obs.observe(el));
 const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(!e.isIntersecting)return;const el=e.target;const target=parseFloat(el.dataset.target);const suffix=el.dataset.suffix||'';const isFloat=target%1!==0;let current=0;const step=target/50;const timer=setInterval(()=>{current+=step;if(current>=target){current=target;clearInterval(timer)}el.textContent=(isFloat?current.toFixed(2):Math.floor(current))+suffix},20);cObs.unobserve(el)})},{threshold:0.5});document.querySelectorAll('.stat-num[data-target]').forEach(el=>cObs.observe(el));
 window.addEventListener('scroll',()=>{const h=document.documentElement.scrollHeight-window.innerHeight;document.getElementById('progress').style.width=(window.scrollY/h*100)+'%'});
 window.addEventListener('scroll',()=>{document.querySelector('nav').classList.toggle('scrolled',window.scrollY>60)});
-const sections=['hero','s01','s02','s03','s04','s05','s06','s07','outro'];const dots=document.querySelectorAll('.nav-dot');const dObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const i=sections.indexOf(e.target.id);if(i>=0)dots.forEach((d,j)=>d.classList.toggle('active',j===i))}})},{threshold:0.25});sections.forEach(id=>{const el=document.getElementById(id);if(el)dObs.observe(el)});
+const sections=['hero','s01','s02','s03','s04','s05','s06','s07','s08','s09','s10','s11','outro'];const dots=document.querySelectorAll('.nav-dot');const dObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isIntersecting){const i=sections.indexOf(e.target.id);if(i>=0)dots.forEach((d,j)=>d.classList.toggle('active',j===i))}})},{threshold:0.25});sections.forEach(id=>{const el=document.getElementById(id);if(el)dObs.observe(el)});
 document.querySelectorAll('.acc-header').forEach(h=>{h.addEventListener('click',()=>{const item=h.parentElement;const body=item.querySelector('.acc-body');const inner=item.querySelector('.acc-body-inner');if(item.classList.contains('open')){item.classList.remove('open');body.style.maxHeight='0'}else{document.querySelectorAll('.acc-item.open').forEach(i=>{i.classList.remove('open');i.querySelector('.acc-body').style.maxHeight='0'});item.classList.add('open');body.style.maxHeight=inner.scrollHeight+'px'}})});
 </script>
 </body>
